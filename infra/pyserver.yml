@@ -57,6 +57,11 @@ metadata:
   name: pyserver
 spec:
   host: pyserver
+  trafficPolicy:
+    connectionPool:
+      tcp:
+        maxConnections: 5
+        maxConnectionDuration: 1ms
   subsets:
   - name: v1
     labels:
